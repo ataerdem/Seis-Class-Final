@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1767464827.48901 "/home/erdem/Code/Seis Class Final/report/Final Report.tex" "Final Report.pdf" "Final Report" 1767464828.47539 0
+["pdflatex"] 1767768383.80201 "/home/erdem/Code/Seis Class Final/report/Final Report.tex" "Final Report.pdf" "Final Report" 1767768384.77217 0
   "/etc/texmf/web2c/texmf.cnf" 1757953911.69543 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/erdem/Code/Seis Class Final/report/Final Report.tex" 1767464827.38558 5080 d6a5f3e8d0688bc023a0bc4a89974d75 ""
+  "/home/erdem/Code/Seis Class Final/report/Final Report.tex" 1767768383.62584 5084 922b2ba79010e3e26b1d64a79f652407 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -64,10 +64,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1757953927.40094 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1757953963 8213010 ddf9e3c270f0ccc7ccea01b87ef4019c ""
-  "Final Report.aux" 1767464828.44759 2874 1c53ceb76bab143bc064850d97dcc3e3 "pdflatex"
-  "Final Report.out" 1767464828.44859 791 1791810d7571ef186e17a0791ba709cf "pdflatex"
-  "Final Report.tex" 1767464827.38558 5080 d6a5f3e8d0688bc023a0bc4a89974d75 ""
-  "Final Report.toc" 1767464828.44859 439 9e57706affc80e6b4f07c11272d3083b "pdflatex"
+  "Final Report.aux" 1767768384.73486 2874 1c53ceb76bab143bc064850d97dcc3e3 "pdflatex"
+  "Final Report.out" 1767768384.73486 791 1791810d7571ef186e17a0791ba709cf "pdflatex"
+  "Final Report.tex" 1767768383.62584 5084 922b2ba79010e3e26b1d64a79f652407 ""
+  "Final Report.toc" 1767768384.73613 439 9e57706affc80e6b4f07c11272d3083b "pdflatex"
   "bots.png" 1767464620.81495 112503 ae556ad9a1f9c4be817a8d3e9364d264 ""
   "hyp_solution.png" 1767463375.13195 896616 46f9bd9942c98c2291732a498ff36def ""
   "kavv.png" 1767464630.36295 100306 cfd3b18ae24af3feec69a5207c333e61 ""
