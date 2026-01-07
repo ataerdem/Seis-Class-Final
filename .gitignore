@@ -1,0 +1,5 @@
+__pycache__
+.conda
+20250425/waveforms
+20250425/synthetics
+*.mseed

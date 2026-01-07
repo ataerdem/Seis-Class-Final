@@ -1,0 +1,126 @@
+% Final Report Template
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{subcaption}
+
+% Title and Author
+\title{Final Report}
+\author{Erdem}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+% Introduction Section
+\section{Introduction}
+I have chosen an earthquake that occured in 25/04/2025 with a reported magnitude of 4.2 to use in this project. This work includes the following:
+
+\begin{itemize}
+    \item Data gathering
+    \item Phase picking
+    \item Location solution
+    \item Magnitude solution
+    \item Synthetic waveform generation
+\end{itemize}
+
+% Methodology Section
+\section{Data gathering}
+The reported origin time of the earthquake is 25/04/2025 17:33:16, and the reported location is 40.86, 28.43. In order to gather waveform data, I used the mass downloader feature of obspy with a maximum distance of 80 km and maximum gap of 0.2 and a time interval of 1 minute. This provided me with waveforms from BGKT, BOTS, BRGA, BUYA, CRLU, CTYL, ESKY, GEML, GUZE, KAVV, KCTX, KOUK, KRTL, LAFA, MAEG, MRMT, SILV, SLVT and TKR stations although not every component was available. For the same stations, I downloaded the station data in xml format.
+
+I also checked to see if any of the waveforms were clipped but none of them seemed to be clipped.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{map_data.png}
+    \caption{Event location and station locations on the map}
+    \label{fig:example}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{wf1.png}
+        \caption{Waveform from GEML}
+        \label{fig:image1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{wf2.png}
+        \caption{Waveform from ESKY}
+        \label{fig:image2}
+    \end{subfigure}
+    \caption{Example waveforms from the data}
+    \label{fig:side_by_side}
+\end{figure}
+
+\pagebreak
+% Results Section
+\section{Phase picking}
+I manually picked the P and S arrival times on the data using snuffler. At the location solution phase, based on the error of the picks, I removed some of the picks since I decided my picks were incorrect.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1.1\textwidth]{picks.png}
+    \caption{Some of the picks on snuffler}
+    \label{fig:example}
+\end{figure}
+
+% Discussion Section
+\section{Location Solution}
+I used SEISAN software to solve for the location of the event using the phase picks from the previous section. This process was iterative: I would make phase picks, solve, then either remove or add phase picks until I was convinced that all picks were reliable and the number of phase picks were sufficient.
+
+As an itial guess for the solution, I used 41.00 degrees, 28.5 degrees, 20 km and 17:33:21 for latitude, longitude, depth and origin time respectively. The resulting solution was 40.82 degrees, 28.44 degrees, 5 km, 17:33:16.6 in the same order.
+
+The resulting solution has a hypocenter error of 4 kms and a depth error of 3 kms according to KOERI catalogue and 6 kms according to AFAD catalogue. The origin time error was under a second.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{hyp_solution.png}
+    \caption{Hypocenter solution and the time residues of phase picks used in the solution}
+    \label{fig:example}
+\end{figure}
+
+% Conclusion Section
+\section{Magnitude Solution}
+No stations were clipped so I used all of the stations that had phase picks in magnitude solution. The result was 4.1 mL. This can be reasonably close to the solutions of KOERI and AFAD which are 4.3 mW and 4.2 mL respectively.
+
+\section{Synthetic Waveform Generation}
+As the final step of this project, I used Marmara region's velocity model to create green functions and simulate the ground motion under double couple assumption. I obtained the focal mechanism through AFAD and guessed the duration of the event.
+
+Since the generated waveforms would not be able to model the high frequency components well, I passed the observed data through a lowpass filter with a cutoff frequency of 0.2.
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.6\textwidth}  % Adjusted width for vertical alignment
+        \centering
+        \includegraphics[width=\textwidth]{slvt.png}
+        \caption{SLVT}
+        \label{fig:image1}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.6\textwidth}  % Adjusted width for vertical alignment
+        \centering
+        \includegraphics[width=\textwidth]{bots.png}
+        \caption{BOTS}
+        \label{fig:image2}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.6\textwidth}  % Adjusted width for vertical alignment
+        \centering
+        \includegraphics[width=\textwidth]{kavv.png}
+        \caption{KAVV}
+        \label{fig:image2}
+    \end{subfigure}
+    \caption{Generated waveforms and observed waveforms}
+    \label{fig:side_by_side}
+\end{figure}
+
+
+
+\end{document}

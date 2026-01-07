@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Data gathering}{2}{section.2}%
+\contentsline {section}{\numberline {3}Phase picking}{3}{section.3}%
+\contentsline {section}{\numberline {4}Location Solution}{4}{section.4}%
+\contentsline {section}{\numberline {5}Magnitude Solution}{4}{section.5}%
+\contentsline {section}{\numberline {6}Synthetic Waveform Generation}{5}{section.6}%
